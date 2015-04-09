@@ -7,6 +7,8 @@ $(document).ready(function(){
 		$.post("calculateAddData.php", {updatenum: text, customerid: custid, redeem: redeemed}, function(data){
 		$("#systemPoints").html(data).show();
 		console.log(data);
+		$("#summary").text($("#summary").text()+"+10 (undo)");
+		
 	}) //end post
 	}) //end function
 
@@ -19,6 +21,7 @@ $(document).ready(function(){
 		$.post("calculateSubtractData.php", {updatenum: text, customerid: custid, redeem: redeemed}, function(data){
 		$("#systemPoints").html(data).show();
 		console.log(data);
+		$("#summary").text($("#summary").text()+"-10 (redeem)");
 	}) //end post
 	}) //end function
 	
@@ -89,7 +92,7 @@ $(document).ready(function(){
         //  set the calculator display to empty
         $("#calc_display").text("");
 		
-		
+		$("#summary").text($("#summary").text()+"+"+points);
 		var custid = $("#customerid").val();
 		var text = $("#customerPoints").text();
 		var redeemed = "not";
@@ -150,6 +153,7 @@ $(document).ready(function(){
         //  set the calculator display to empty
         $("#calc_display").text("");
 		
+		$("#summary").text($("#summary").text()+"-"+points);
 		
 		var custid = $("#customerid").val();
 		var text = parseFloat($("#customerPoints").text());

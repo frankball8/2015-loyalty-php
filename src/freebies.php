@@ -81,6 +81,7 @@ $username = $_SESSION["user_name"];
 				<tr style="font-size:20px;"><td style="font-weight:bold;padding-bottom:10px;">Points in System:</td><td id="systemPoints" style="padding-bottom:10px;"><?php echo $row['Points']; ?></td></tr>
 				<!-- <tr style="font-size:20px;"><td style="font-weight:bold;padding-bottom:10px;">Freebies:</td><td id="customerFreebies" style="padding-bottom:10px;"></td></tr> -->
 				<tr style="font-size:20px;"><td style="font-weight:bold;padding-bottom:10px;">Points to +/- :</td><td id="customerPoints" style="padding-bottom:10px;"></td></tr>
+				<tr style="font-size:20px;"><td style="font-weight:bold;padding-bottom:10px;">Summary:</td><td id="summary" style="padding-bottom:10px;"></td></tr>
 
 			</table>
 
