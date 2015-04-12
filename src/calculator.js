@@ -140,8 +140,12 @@ $(document).ready(function(){
 
         //  converst oldPoints to INT in case it isn't already
         oldPoints = parseInt(oldPoints);
-
-        //  if subtracting more points than you have
+		
+		if (currentDisplay > parseInt($("#systemPoints").text()))
+        {
+            alert("You can't take away more points than the customer has.");
+        }
+		else{
         
             //  variable for new point display
             var points = oldPoints + currentDisplay;
@@ -163,9 +167,8 @@ $(document).ready(function(){
 		$("#systemPoints").html(data).show();
 		console.log(data);
 		clearfunction();
-		
-		
 		});
+		}//end else
 		
     })
 
